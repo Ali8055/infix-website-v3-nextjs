@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export function Cta() {
   return (
@@ -12,9 +13,11 @@ export function Cta() {
           Connect with us to explore how we can deliver exceptional AI
         </p>
         <p className="mx-auto font-semibold  text-pretty text-md leading-relaxed">solutions for your needs.</p>
-        <Button size="lg" className="mt-8 rounded-sm shadow font-semibold text-lg py-7 cursor-pointer px-8">
-          Book a Consultation
-        </Button>
+        <Link href={"/contact/#contactform"}>
+          <Button size="lg" className="mt-8 rounded-sm shadow font-semibold text-lg py-7 cursor-pointer px-8">
+            Book a Consultation
+          </Button>
+        </Link>
       </div>
     </section>
   )

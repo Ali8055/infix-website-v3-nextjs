@@ -3,6 +3,7 @@ import { HelpCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SectionBadge } from "../section-badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion"
+import Link from "next/link"
 
 const FAQS = [
   {
@@ -29,7 +30,7 @@ export function Faq() {
     <section id="careers" className="bg-lavender min-h-screen flex flex-col">
       {/* 2. Added a safe bottom padding (pb-12 lg:pb-16) so the accordion never slams into the very bottom of the screen */}
       <div className="mx-auto px-20 pt-20 lg:pt-28 pb-12 lg:pb-16 flex flex-col flex-1 w-full ">
-        
+
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <SectionBadge icon={HelpCircle}>Your Questions, Answers</SectionBadge>
@@ -47,7 +48,7 @@ export function Faq() {
 
         {/* mt-auto pushes this block to the bottom dynamically */}
         <div className="mt-auto pt-12 grid grid-cols-1 gap-52 lg:grid-cols-[0.8fr_1.2fr] items-end">
-          
+
           {/* card */}
           <div className="flex flex-col rounded-2xl bg-primary p-12 text-primary-foreground">
             <h3 className="font-heading text-4xl font-bold">
@@ -57,11 +58,13 @@ export function Faq() {
               We&apos;ll build the right solution with speed, precision, and
               expertise.
             </p>
-            <Button
-              className="mt-6 w-fit rounded-sm text-lg p-6 bg-white px-7 text-ink hover:bg-white/90"
-            >
-              Get in Touch
-            </Button>
+            <Link href={"/contact/#contactform"}>
+              <Button
+                className="mt-6 w-fit rounded-sm text-lg p-6 bg-white px-7 text-ink hover:bg-white/90"
+              >
+                Get in Touch
+              </Button>
+            </Link>
           </div>
 
           <Accordion
@@ -95,6 +98,6 @@ export function Faq() {
           </Accordion>
         </div>
       </div>
-    </section>
+    </section >
   )
 }

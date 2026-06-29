@@ -1,6 +1,7 @@
 import { ArrowRight, BriefcaseBusiness } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SectionBadge } from "../section-badge"
+import Link from "next/link"
 
 const PROJECTS = [
   {
@@ -31,10 +32,10 @@ const PROJECTS = [
 
 export function FeaturedProjects() {
   return (
-    <section id="solutions" className="bg-ink">
+    <section id="portfolio" className="bg-ink">
       {/* Changed: Made padding fluid (px-4 to px-8 on desktop, py-12 to py-28) */}
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-28">
-        
+
         {/* Header Section */}
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
@@ -81,12 +82,12 @@ export function FeaturedProjects() {
                 <p className="mt-2 line-clamp-4 text-sm text-white/80 leading-relaxed sm:text-base lg:text-lg">
                   {project.description}
                 </p>
-                <a
-                  href="#"
+                <Link
+                  href="./featured-projects"
                   className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline sm:mt-auto"
                 >
                   Read More <ArrowRight className="size-4" />
-                </a>
+                </Link>
               </div>
             </article>
           ))}
@@ -101,12 +102,14 @@ export function FeaturedProjects() {
             designed to solve real-world challenges, enhance business
             performance, and deliver measurable results for our clients.
           </p>
-          <Button
-            size="lg"
-            className="mt-7 w-full rounded-full bg-white px-7 py-6 text-ink hover:bg-white/90 sm:w-auto"
-          >
-            Start a Project
-          </Button>
+          <Link href={"/contact/#contactform"}>
+            <Button
+              size="lg"
+              className="mt-7 w-full rounded-full bg-white px-7 py-6 text-ink hover:bg-white/90 sm:w-auto"
+            >
+              Start a Project
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

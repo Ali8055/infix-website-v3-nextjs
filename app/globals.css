@@ -13,16 +13,32 @@
   --animate-marquee: marquee 25s linear infinite;
 
   @keyframes marquee {
-    from { transform: translateX(0%); }
-    to { transform: translateX(-50%); }
+    from {
+      transform: translateX(0%);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
   }
 }
+
 @layer utilities {
+
   /* Utility to keep the track scrollable on touch devices without displaying the bar */
-  .no-scrollbar::-webkit-scrollbar { display: none; }
-  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
+
 @theme inline {
+  /* --background-image-hero-cyber: linear-gradient(80.32deg, rgba(225, 19, 19, 0.2) 10.84%, rgba(24, 28, 227, 0.2) 55.41%, rgba(0, 213, 255, 0.2) 99.97%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)); */
+  --background-image-hero-cyber: linear-gradient(80.32deg, rgba(225, 19, 19, 0.45) 10.84%, rgba(24, 28, 227, 0.45) 55.41%, rgba(0, 213, 255, 0.45) 99.97%), linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   --font-heading: var(--font-heading), 'Plus Jakarta Sans Fallback';
   --font-sans: var(--font-body), 'Inter Fallback';
   --font-mono: var(--font-body), 'Inter Fallback';
@@ -182,9 +198,11 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-sans;
   }

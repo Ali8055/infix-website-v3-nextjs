@@ -105,7 +105,7 @@ export default function ContactPage() {
             </section>
 
             {/* ── Conversation section ── */}
-            <section className="bg-gradient-to-t from-[#D8D6FD] to-[#FFFFFF] bg-white p-20 h-screen">
+            <section id="contactform" className="bg-gradient-to-t from-[#D8D6FD] to-[#FFFFFF] bg-white p-20 h-screen">
                 {/* top label row */}
                 <div className="mx-auto mb-12 flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
                     <div>
@@ -122,7 +122,7 @@ export default function ContactPage() {
 
                 {/* two-column card */}
                 {/* Changed: Replaced single card grid with a flex or layout grid with a gap and removed overflow-hidden */}
-                <div className="mx-auto grid grid-cols-1 gap-8 lg:grid-cols-[440px_1fr]">
+                <div  className="mx-auto grid grid-cols-1 gap-8 lg:grid-cols-[440px_1fr]">
 
                     {/* ── Left – dark info panel ── */}
                     {/* Added: shadow-xl and rounded-3xl explicitly to this container */}
@@ -172,7 +172,7 @@ export default function ContactPage() {
 
                     {/* ── Right – contact form ── */}
                     {/* Added: shadow-xl, rounded-3xl, and converted bg-lavender/30 to an opaque or cleanly bordered container */}
-                    <div className="bg-white p-10 rounded-3xl shadow-xl border border-lavender/10">
+                    <div  className="bg-white p-10 rounded-3xl shadow-xl border border-lavender/10">
                         <h3 className="font-heading mb-8 text-2xl font-bold text-ink">
                             Get in Touch
                         </h3>

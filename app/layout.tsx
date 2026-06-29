@@ -2,6 +2,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Plus_Jakarta_Sans, Inter, Stack_Sans_Headline } from 'next/font/google'
 import './globals.css'
+import { SiteHeader } from '@/components/site-header'
 
 
 const inter = Inter({
@@ -58,6 +59,8 @@ export default function RootLayout({
       className={`${stackSansHeadline.variable} ${inter.variable} bg-background`}
     >
       <body className="font-sans antialiased">
+        <SiteHeader />
+
         {children}
         {/* {process.env.NODE_ENV === 'production' && <Analytics />} */}
       </body>
