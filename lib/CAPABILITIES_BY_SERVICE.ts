@@ -4,31 +4,31 @@ export const CAPABILITIES_BY_SERVICE = [
       items: [
         {
           name: "Generative AI",
-          img: "/assets/gen-ai.png",
+          img: "/assets/ai-network.png",
           exp: "+13",
           paragraphs: ["Unlock creative automation and scale localized LLMs tailored to enterprise data workflows."]
         },
         {
           name: "Predictive AI",
-          img: "/assets/predictive-ai.png",
+          img: "/assets/crm.png",
           exp: "+9",
           paragraphs: ["Anticipate market vectors and customer churn patterns with high-accuracy analytical training structures."]
         },
         {
           name: "Machine Learning",
-          img: "/assets/ml.png",
+          img: "/assets/figma.png",
           exp: "+11",
           paragraphs: ["Deploy neural processing nodes directly targeting legacy automation pipelines seamlessly."]
         },
         {
           name: "MLOps",
-          img: "/assets/mlops.png",
+          img: "/assets/topcoach.png",
           exp: "+5",
           paragraphs: ["Establish robust production pipelines monitoring health and performance metrics continuously."]
         },
         {
           name: "AI assessment",
-          img: "/assets/assessment.png",
+          img: "/assets/ai-network.png",
           exp: "+15",
           paragraphs: ["Audit technological alignment roadmaps to pinpoint maximum financial value targets securely."]
         }
