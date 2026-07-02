@@ -121,6 +121,251 @@
 //       </div>
 //     </footer>
 //   )
+// // }
+// import Link from "next/link";
+// import { Mail, Phone } from "lucide-react";
+
+// import { Logo } from "@/components/logo";
+// import { InstagramIcon, LinkedInIcon, XIcon } from "./social-icons";
+
+// const COLUMNS = [
+//   {
+//     title: "Navigation",
+//     links: [
+//       { label: "Who We Are", href: "/who-we-are" },
+//       { label: "Solutions", href: "/#portfolio" },
+//       { label: "Resources", href: "/resources" },
+//       { label: "Careers", href: "/careers" },
+//       { label: "Contact Us", href: "/contact" },
+//     ],
+//   },
+//   {
+//     title: "Services",
+//     links: [
+//       { label: "AI Transformation", href: "/#services" },
+//       { label: "Data & Analytics", href: "/services/data-analytics" },
+//       { label: "Cloud", href: "/services/cloud" },
+//       { label: "Security", href: "/services/security" },
+//       { label: "BPS", href: "/services/bps" },
+//     ],
+//   },
+// ];
+
+// const SOCIALS = [
+//   {
+//     Icon: XIcon,
+//     href: "https://x.com/infixsystems",
+//   },
+//   {
+//     Icon: InstagramIcon,
+//     href: "https://instagram.com/infixsystems",
+//   },
+//   {
+//     Icon: LinkedInIcon,
+//     href: "https://linkedin.com/company/infixsystems",
+//   },
+// ];
+
+// export function SiteFooter() {
+//   return (
+//     <footer id="contact" className="bg-black px-4 py-4 lg:px-6 lg:py-6">
+//       {/* <div
+//         className="
+//           relative
+//           overflow-hidden
+//           rounded-[32px]
+//           border
+//           border-[#252B46]
+//           bg-[#03050B]
+//         "
+//       > */}
+//       <div
+//           aria-hidden="true"
+//           className="
+            
+//             inset-0
+//             bg-[url('/assets/black-tiles-BG-C.png')]
+//             bg-contain
+//             bg-repeat
+//             opacity-80
+//             pointer-events-none
+//             rounded-[32px]
+//           "
+//         >
+//         {/* Background Pattern */}
+//         {/* <img
+//           src="/assets/black-tiles-BG-C.png"
+//           alt=""
+//           aria-hidden="true"
+//           className="
+//             absolute
+//             inset-0
+//             h-full
+//             w-full
+//             object-fit
+//             opacity-80
+//             pointer-events-none
+//           "
+//         /> */}
+
+//         {/* Overlay */}
+//         {/* <div className="absolute inset-0 bg-[#03050B]/70" /> */}
+
+//         {/* Content */}
+//         <div className="relative z-10 px-8 py-10 lg:px-14 lg:py-14">
+//           <div className="grid gap-12 lg:grid-cols-[1.6fr_1fr_1fr_1.3fr]">
+//             {/* Left Column */}
+//             <div className="max-w-md">
+//               <Logo dark />
+
+//               <p className="mt-8 text-lg leading-relaxed text-white lg:text-[22px]">
+//                 Connect with us to explore how we can deliver exceptional AI
+//                 solutions for your needs.
+//               </p>
+
+//               <div className="mt-10 space-y-5">
+//                 <a
+//                   href="mailto:info@infixsystems.com"
+//                   className="
+//                     flex
+//                     items-center
+//                     gap-4
+//                     text-white/70
+//                     transition-colors
+//                     hover:text-white
+//                   "
+//                 >
+//                   <Mail className="size-6 shrink-0" />
+//                   <span className="text-lg lg:text-[18px]">
+//                     info@infixsystems.com
+//                   </span>
+//                 </a>
+
+//                 <a
+//                   href="tel:+925123456789"
+//                   className="
+//                     flex
+//                     items-center
+//                     gap-4
+//                     text-white/70
+//                     transition-colors
+//                     hover:text-white
+//                   "
+//                 >
+//                   <Phone className="size-6 shrink-0" />
+//                   <span className="text-lg lg:text-[18px]">
+//                     +92 51 234 56789
+//                   </span>
+//                 </a>
+//               </div>
+//             </div>
+
+//             {/* Navigation + Services */}
+//             {COLUMNS.map((column) => (
+//               <div key={column.title}>
+//                 <h3 className="text-2xl font-semibold text-white lg:text-[28px]">
+//                   {column.title}
+//                 </h3>
+
+//                 <ul className="mt-8 space-y-5">
+//                   {column.links.map((link) => (
+//                     <li key={link.label}>
+//                       <Link
+//                         href={link.href}
+//                         className="
+//                           text-white/60
+//                           transition-colors
+//                           hover:text-white
+//                           text-lg
+//                         "
+//                       >
+//                         {link.label}
+//                       </Link>
+//                     </li>
+//                   ))}
+//                 </ul>
+//               </div>
+//             ))}
+
+//             {/* Contacts */}
+//             <div>
+//               <h3 className="text-2xl font-semibold text-white lg:text-[28px]">
+//                 Contacts
+//               </h3>
+
+//               <h4 className="mt-8 text-xl font-medium text-white">
+//                 Corporate Headquarters
+//               </h4>
+
+//               <p className="mt-3 max-w-sm text-lg leading-relaxed text-white/60">
+//                 Address: Viale Francesco Crispi 11,
+//                 <br />
+//                 Milan, Italy
+//               </p>
+
+//               <h4 className="mt-10 text-xl font-semibold text-white">
+//                 Socials
+//               </h4>
+
+//               <div className="mt-5 flex gap-4">
+//                 {SOCIALS.map(({ Icon, href }, index) => (
+//                   <a
+//                     key={index}
+//                     href={href}
+//                     target="_blank"
+//                     rel="noopener noreferrer"
+//                     className="
+//                       flex
+//                       h-14
+//                       w-14
+//                       items-center
+//                       justify-center
+//                       rounded-full
+//                       border
+//                       border-white/20
+//                       bg-white/10
+//                       text-white
+//                       transition-all
+//                       duration-300
+//                       hover:scale-105
+//                       hover:bg-white/20
+//                     "
+//                   >
+//                     <Icon className="size-5" />
+//                   </a>
+//                 ))}
+//               </div>
+//             </div>
+//           </div>
+
+//           {/* Bottom Section */}
+//           <div className="mt-14 border-t border-dashed border-white/20 pt-8">
+//             <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+//               <p className="text-sm text-white/40 lg:text-base">
+//                 © 2026 infixsystems.com
+//               </p>
+
+//               <div className="flex gap-8 text-sm lg:text-base">
+//                 <Link
+//                   href="/terms"
+//                   className="text-white/40 transition-colors hover:text-white"
+//                 >
+//                   Terms & Conditions
+//                 </Link>
+
+//                 <Link
+//                   href="/privacy"
+//                   className="text-white/40 transition-colors hover:text-white"
+//                 >
+//                   Privacy Policy
+//                 </Link>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </footer>
+//   );
 // }
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
@@ -132,9 +377,9 @@ const COLUMNS = [
   {
     title: "Navigation",
     links: [
-      { label: "Who We Are", href: "/who-we-are" },
-      { label: "Solutions", href: "/#portfolio" },
-      { label: "Resources", href: "/resources" },
+      { label: "Who We Are", href: "/#who-we-are-section" },
+      { label: "Portfolio", href: "/#portfolio" },
+      { label: "Services", href: "/#services" },
       { label: "Careers", href: "/careers" },
       { label: "Contact Us", href: "/contact" },
     ],
@@ -143,10 +388,10 @@ const COLUMNS = [
     title: "Services",
     links: [
       { label: "AI Transformation", href: "/#services" },
-      { label: "Data & Analytics", href: "/services/data-analytics" },
-      { label: "Cloud", href: "/services/cloud" },
-      { label: "Security", href: "/services/security" },
-      { label: "BPS", href: "/services/bps" },
+      { label: "Data & Analytics", href: "/#services" },
+      { label: "Cloud", href: "/#services" },
+      { label: "Security", href: "/#services" },
+      { label: "BPS", href: "/#services" },
     ],
   },
 ];
@@ -169,6 +414,7 @@ const SOCIALS = [
 export function SiteFooter() {
   return (
     <footer id="contact" className="bg-black px-4 py-4 lg:px-6 lg:py-6">
+      {/* The main container must be relative and overflow-hidden */}
       <div
         className="
           relative
@@ -179,26 +425,21 @@ export function SiteFooter() {
           bg-[#03050B]
         "
       >
-        {/* Background Pattern */}
-        <img
-          src="/assets/black-tiles-BG-C.png"
-          alt=""
+        {/* Background Layer: Must be absolute and pointer-events-none */}
+        <div
           aria-hidden="true"
           className="
             absolute
             inset-0
-            h-full
-            w-full
-            object-contain
+            bg-[url('/assets/black-tiles-BG-C.png')]
+            bg-contain
+            bg-repeat
             opacity-80
             pointer-events-none
           "
         />
 
-        {/* Overlay */}
-        {/* <div className="absolute inset-0 bg-[#03050B]/70" /> */}
-
-        {/* Content */}
+        {/* Content Layer: Must explicitly use relative and z-10 to stay on top */}
         <div className="relative z-10 px-8 py-10 lg:px-14 lg:py-14">
           <div className="grid gap-12 lg:grid-cols-[1.6fr_1fr_1fr_1.3fr]">
             {/* Left Column */}
