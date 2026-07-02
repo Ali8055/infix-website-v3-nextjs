@@ -2,6 +2,8 @@
 import type { Metadata, Viewport } from 'next'
 import { Plus_Jakarta_Sans, Inter, Stack_Sans_Headline } from 'next/font/google'
 import './globals.css'
+import { BackToTop } from '@/components/back-to-top'
+import { LetsTalkWidget } from '@/components/lets-talk-widget'
 import { SiteHeader } from '@/components/site-header'
 
 
@@ -62,6 +64,8 @@ export default function RootLayout({
         <SiteHeader />
 
         {children}
+        <LetsTalkWidget />
+        <BackToTop />
         {/* {process.env.NODE_ENV === 'production' && <Analytics />} */}
       </body>
     </html>

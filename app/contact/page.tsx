@@ -109,12 +109,12 @@ export default function ContactPage() {
                 {/* top label row */}
                 <div className="mx-auto mb-12 flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
                     <div>
-                        <SectionBadge icon={Globe}>Job Opportunities</SectionBadge>
+                        <SectionBadge icon={Globe}>Contact Us</SectionBadge>
                         <h2 className="font-heading mt-4 text-5xl text-ink sm:text-5xl">
                             Let&rsquo;s Start a Conversation
                         </h2>
                     </div>
-                    <p className="max-w-xs text-right text-base leading-relaxed sm:mt-2">
+                    <p className="max-w-sm font-bold text-right text-base leading-relaxed sm:mt-2">
                         Ready to transform your ideas into reality? Get in touch with us and
                         let&rsquo;s discuss how we can help you achieve your goals.
                     </p>
@@ -122,11 +122,11 @@ export default function ContactPage() {
 
                 {/* two-column card */}
                 {/* Changed: Replaced single card grid with a flex or layout grid with a gap and removed overflow-hidden */}
-                <div  className="mx-auto grid grid-cols-1 gap-8 lg:grid-cols-[440px_1fr]">
+                <div className="mx-auto grid grid-cols-1 gap-8 lg:grid-cols-[440px_1fr]">
 
                     {/* ── Left – dark info panel ── */}
                     {/* Added: shadow-xl and rounded-3xl explicitly to this container */}
-                    <div className="flex flex-col justify-between gap-10 bg-ink p-10 text-white rounded-3xl shadow-xl">
+                    {/* <div className="flex flex-col justify-between gap-10 bg-ink p-10 text-white rounded-3xl shadow-xl">
                         <div className="flex flex-col p-4 text-center justify-center item-center">
                             <Logo dark />
                             <p className="mt-6 text-base leading-relaxed ">
@@ -168,11 +168,77 @@ export default function ContactPage() {
                                 </a>
                             ))}
                         </div>
-                    </div>
+                    </div> */}
+                    {/* ── Left – dark info panel ── */}
+                    <div className="relative overflow-hidden flex flex-col justify-between gap-10 bg-ink p-10 text-white rounded-3xl shadow-xl ">
 
+                        {/* NEXT.JS OPTIMIZED BACKGROUND IMAGE ASSET */}
+                        {/* <div className="absolute inset-0 z-0">
+                            <img
+                                src="/assets/black-tiles-BG-C.png"
+                                alt="Tile background pattern"
+                                className="w-full h-full object-cover object-center pointer-events-none border border-red-500 border-[15px]"
+                            /> */}
+                        {/* Optional overlay layer to maintain high readability contrast */}
+                        {/* <div className="absolute inset-0 bg-ink/50 mix-blend-multiply" /> */}
+                        {/* </div> */}
+                        <div className="absolute inset-0 z-0 p-3"> {/* Added padding to inset the border slightly if desired, or remove p-3 for a flush edge */}
+                            <div className="relative w-full h-full rounded-[45px] border-[5px] border-black overflow-hidden">
+                                <img
+                                    src="/assets/black-tiles-BG-C.png"
+                                    alt="Tile background pattern"
+                                    className="w-full h-full object-cover object-center pointer-events-none"
+                                />
+                                {/* Optional overlay layer to maintain high readability contrast */}
+                                {/* <div className="absolute inset-0 bg-ink/50 mix-blend-multiply" /> */}
+                            </div>
+                        </div>
+                        {/* CONTENT - Lifted safely using 'relative z-10' */}
+                        <div className="relative z-10 flex flex-col p-4 text-center justify-center items-center">
+                            <Logo dark />
+                            <p className="mt-6 text-base leading-relaxed text-white/90">
+                                Connect with us to explore how we can deliver exceptional AI
+                                solutions for your needs.
+                            </p>
+                        </div>
+
+                        <div className="relative z-10 space-y-5">
+                            <a
+                                href="tel:+923458589342"
+                                className="flex items-center gap-3 flex-col text-base text-white transition-colors hover:text-primary"
+                            >
+                                <span className="flex size-9 items-center justify-center rounded-full border border-white/20 bg-white/10">
+                                    <Phone className="size-4" />
+                                </span>
+                                +92 345 8589342
+                            </a>
+                            <a
+                                href="mailto:info@infixsystems.com"
+                                className="flex items-center gap-3 flex-col text-base text-white transition-colors hover:text-primary"
+                            >
+                                <span className="flex size-9 items-center justify-center rounded-full border border-white/20 bg-white/10">
+                                    <Mail className="size-4" />
+                                </span>
+                                info@infixsystems.com
+                            </a>
+                        </div>
+
+                        <div className="relative z-10 flex gap-3 justify-center">
+                            {[XIcon, InstagramIcon, LinkedInIcon].map((Icon, i) => (
+                                <a
+                                    key={i}
+                                    href="#"
+                                    className="flex size-11 items-center justify-center rounded-full border border-white/25 bg-white/10 transition-colors hover:bg-white/20"
+                                    aria-label={["X / Twitter", "Instagram", "LinkedIn"][i]}
+                                >
+                                    <Icon className="size-4" />
+                                </a>
+                            ))}
+                        </div>
+                    </div>
                     {/* ── Right – contact form ── */}
                     {/* Added: shadow-xl, rounded-3xl, and converted bg-lavender/30 to an opaque or cleanly bordered container */}
-                    <div  className="bg-white p-10 rounded-3xl shadow-xl border border-lavender/10">
+                    <div className="bg-white p-10 rounded-3xl shadow-xl border border-lavender/10">
                         <h3 className="font-heading mb-8 text-2xl font-bold text-ink">
                             Get in Touch
                         </h3>
@@ -201,7 +267,7 @@ export default function ContactPage() {
                                 <div className="space-y-2">
                                     <label
                                         htmlFor="email"
-                                        className="block text-sm font-semibold text-ink"
+                                        className="block text-md font-semibold text-ink"
                                     >
                                         Email Address
                                     </label>
@@ -221,7 +287,7 @@ export default function ContactPage() {
                                 <div className="space-y-2">
                                     <label
                                         htmlFor="message"
-                                        className="block text-sm font-semibold text-ink"
+                                        className="block text-md font-semibold text-ink"
                                     >
                                         Message
                                     </label>
@@ -241,7 +307,7 @@ export default function ContactPage() {
                                             {message.length} / {MAX_CHARS}
                                         </span>
                                     </div>
-                                    <p className="text-xs text-muted-foreground">
+                                    <p className="text-md text-muted-foreground">
                                         Your message is encrypted and secured. We respect your
                                         privacy and will never share your information.
                                     </p>

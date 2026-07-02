@@ -7,8 +7,8 @@ import { MeetProfessionals } from "@/components/sections/meet-professionals"
 import { Faq } from "@/components/sections/faq"
 import { Cta } from "@/components/sections/cta"
 import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
 import { SideRail } from "@/components/side-rail"
+import { SiteFooter } from "@/components/site-footer"
 
 export default function WhoWeArePage() {
   return (

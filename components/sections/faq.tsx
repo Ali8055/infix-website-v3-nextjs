@@ -27,9 +27,25 @@ const FAQS = [
 export function Faq() {
   return (
     // 1. Changed h-screen to min-h-screen so it never forces elements to overflow and hide
-    <section id="careers" className="bg-lavender min-h-screen flex flex-col">
+    // <section id="careers" className="bg-lavender min-h-screen flex flex-col relative overflow-hidden">
+    <section id="careers" className="relative overflow-hidden bg-lavender min-h-screen flex flex-col">
+      {/* BACKGROUND IMAGE CONFIGURATION */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/assets/FAQ-BG.png" // Place your image in public/ directory and change path here
+          alt="Section background"
+          // fill
+          // priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        {/* OPTIONAL OVERLAY: Adjust the opacity (e.g., bg-black/40 or bg-white/20) depending on readability */}
+        <div className="absolute inset-0  mix-blend-multiply" />
+      </div>
       {/* 2. Added a safe bottom padding (pb-12 lg:pb-16) so the accordion never slams into the very bottom of the screen */}
-      <div className="mx-auto px-20 pt-20 lg:pt-28 pb-12 lg:pb-16 flex flex-col flex-1 w-full ">
+      {/* <div className="mx-auto px-20 pt-20 lg:pt-28 pb-12 lg:pb-16 flex flex-col flex-1 w-full "> */}
+      {/* CONTENT WRAPPER - Added 'relative z-10' so it sits comfortably above the background image */}
+      <div className="relative z-10 mx-auto px-20 pt-20 lg:pt-28 pb-12 lg:pb-16 flex flex-col flex-1 w-full">
 
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>

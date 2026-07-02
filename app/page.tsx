@@ -1,12 +1,14 @@
 "use client"
 import { Capabilities } from "@/components/sections/capabilities";
 import { ClientsStrip } from "@/components/sections/clients-strip";
+import { CompanyOverview } from "@/components/sections/company-overview";
 import { Cta } from "@/components/sections/cta";
 import { Faq } from "@/components/sections/faq";
 import { FeaturedProjects } from "@/components/sections/featured-projects";
 import { FounderQuote } from "@/components/sections/founder-quote";
 import { Hero } from "@/components/sections/hero";
 import { Services } from "@/components/sections/services";
+import { StatsStrip } from "@/components/sections/stats-strip";
 import { Technologies } from "@/components/sections/technologies";
 import { SideRail } from "@/components/side-rail";
 import { SiteFooter } from "@/components/site-footer";
@@ -22,7 +24,8 @@ export default function Page() {
       <SideRail />
       <Hero />
       <ClientsStrip />
-
+      <CompanyOverview />
+      <StatsStrip />
       {/* <Services />
       <Capabilities /> */}
       <div className="relative overflow-hidden">

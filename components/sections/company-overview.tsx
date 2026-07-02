@@ -1,6 +1,6 @@
 export function CompanyOverview() {
   return (
-    <section className="py-20 lg:py-28 relative overflow-hidden ">
+    <section id="who-we-are-section" className="py-20 lg:py-28 relative overflow-hidden ">
 
       {/* Subtle dot-grid background */}
       <div
