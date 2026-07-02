@@ -37,62 +37,9 @@ export function CaseStudyTemplate({ study }: { study: CaseStudy }) {
   return (
     <main className="bg-ink text-white">
       {/* Hero */}
-      {/* <section className="relative isolate overflow-hidden bg-gradient-to-br from-primary via-[oklch(0.62_0.2_295)] to-[oklch(0.78_0.1_295)]">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -right-6 -top-4 select-none font-heading text-[180px] font-bold leading-none text-white/10 sm:text-[260px]"
-        >
-          {study.name.slice(0, 3)}
-        </div>
-
-        <div className="relative mx-auto grid max-w-7xl gap-12 px-6 pb-20 pt-36 lg:grid-cols-2 lg:gap-10 lg:px-16 lg:pb-28 lg:pt-44">
-          <div className="flex flex-col justify-center">
-            <SectionBadge icon={BriefcaseBusiness} dark>
-              {study.name}
-            </SectionBadge>
-
-            <h1 className="mt-6 max-w-xl text-balance font-heading text-4xl font-bold leading-[1.15] text-white sm:text-5xl lg:text-6xl">
-              {study.tagline}
-            </h1>
-
-            <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-white/85 sm:text-lg">
-              {study.summary}
-            </p>
-          </div>
-
-          {study.brief && (
-            <div className="flex items-center lg:justify-end">
-              <div className="w-full max-w-md rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-md lg:p-8">
-                <h3 className="pb-4 font-heading text-sm font-semibold uppercase tracking-wider text-white/70">
-                  Project Brief
-                </h3>
-                <div className="mt-2 space-y-5">
-                  {study.brief.map((row: any, i: any) => (
-                    <div
-                      key={row.label}
-                      className={`flex items-start justify-between gap-4 text-sm sm:text-base ${i < study.brief!.length - 1 ? "border-b border-white/10 pb-4" : ""
-                        }`}
-                    >
-                      <span className="shrink-0 text-white/50">{row.label}</span>
-                      <span className="text-right font-medium text-white">{row.value}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-      </section> */}
       <section className="relative isolate h-[780px] overflow-hidden">
 
         {/* RIGHT HERO IMAGE */}
-        {/* <div className="absolute inset-0">
-          <img
-            src={study.cardImage}
-            alt={study.name}
-            className="absolute right-0 top-0 h-full w-[40%] object-cover"
-          />
-        </div> */}
         <div className="absolute inset-0">
           <img
             src={study.cardImage}
@@ -107,7 +54,7 @@ export function CaseStudyTemplate({ study }: { study: CaseStudy }) {
           />
         </div>
         {/* LEFT PURPLE OVERLAY */}
-        <div
+        {/* <div
           className="
     absolute
     inset-0
@@ -120,14 +67,16 @@ export function CaseStudyTemplate({ study }: { study: CaseStudy }) {
     transparent_100%)
     ]
   "
+        /> */}
+        <div
+          className="
+    absolute
+    inset-0
+bg-[linear-gradient(60deg,#7236A5_0%,#5338C6_30%,transparent_100%,transparent_100%)]    "
         />
-
+        {/* bg-[linear-gradient(90deg,rgba(225,19,19,1)_0%,rgba(24,28,227,1)_25%,rgba(0,212,255,0.4)_60%,rgba(0,212,255,0.4)_100%)] */}
         {/* CENTER GLOW */}
-        <div className="absolute left-[55%] top-1/2 h-[650px] w-[650px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#6C63FF]/25 blur-[150px]" />
-
-        {/* Decorative blocks */}
-        {/* <div className="absolute left-[56%] top-20 h-16 w-16 bg-white/10 backdrop-blur-sm" />
-        <div className="absolute left-[60%] top-40 h-12 w-12 bg-white/8 backdrop-blur-sm" /> */}
+        {/* <div className="absolute left-[55%] top-1/2 h-[650px] w-[650px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#6C63FF]/25 blur-[150px]" /> */}
 
         {/* CONTENT */}
         <div className="relative z-20 mx-auto flex h-full  items-center px-6 lg:px-16">

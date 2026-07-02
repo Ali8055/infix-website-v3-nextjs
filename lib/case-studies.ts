@@ -44,7 +44,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     tagline: "A social network for travel you can actually trust.",
     summary:
       "In an era dominated by impersonal review platforms and overcooked travel apps, Nextflag offers a fresh approach: a social first, mobile centric travel platform where users can discover, save, and share places that truly matter, recommended by people they trust. Designed for foodies, luxury travelers, nature lovers, and cultural explorers alike, Nextflag lets users build personal travel maps, curate custom lists, and connect over shared experiences.",
-    cardImage: "/assets/ai-network.png",
+    cardImage: "/assets/next-flag-hero.png",
     cardDescription:
       "A mobile-first social travel app that replaces anonymous reviews with recommendations from people you actually trust.",
     brief: [
